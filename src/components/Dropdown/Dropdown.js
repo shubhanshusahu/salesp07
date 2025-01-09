@@ -2,6 +2,7 @@ import React from "react";
 import { FaTimes } from "react-icons/fa";
 import styled from "@emotion/styled";
 import { Link as ScrollLink } from "react-scroll";
+import { BsBoxArrowUpRight } from "react-icons/bs";
 
 const SiderBar = styled.div`
   background: #151418;
@@ -61,27 +62,25 @@ function Dropdown({ isOpen, toggle }) {
     <SiderBar isOpen={isOpen} onClick={toggle}>
       <CloseIcon onClick={toggle} />
       <NavMenu>
-        <NavLink
-          onClick={toggle}
-          className="menu-item"
-          to="projects"
-        >
+        <NavLink onClick={toggle} className="menu-item" to="projects">
           Projects
         </NavLink>
-        <NavLink
-          onClick={toggle}
-          className="menu-item"
-          to="about"
-        >
+        <NavLink onClick={toggle} className="menu-item" to="about">
           About
         </NavLink>
-        <NavLink
-          onClick={toggle}
-          className="menu-item"
-          to="contact"
-        >
+        <NavLink onClick={toggle} className="menu-item" to="contact">
           Contact
         </NavLink>
+
+        <a
+          style={{ color: "#fff", cursor: "pointer", fontSize: "1.7rem" }}
+          target="blank"
+          onClick={toggle}
+          className="menu-item"
+          href={"https://shubhui.netlify.app/"}
+        >
+          Check my Ui Design <BsBoxArrowUpRight   size={22}/>
+        </a>
       </NavMenu>
       <NavBtn onClick={toggle}>
         <a

@@ -1,15 +1,13 @@
 import React from "react";
 import { Nav, Logo, NavLink, Bars, NavMenu, NavBtn } from "./HeaderElements";
+import { BsBoxArrowUpRight } from "react-icons/bs";
 
 const Header = ({ toggle }) => {
   return (
-    <div className="Container" style={{padding: 0}}>
+    <div className="Container" style={{ padding: 0 }}>
       <Nav>
         <Logo to="/">
-          <img
-            src="/shubhanshuCircle.png"
-            alt="logo"
-          />
+          <img src="/shubhanshuCircle.png" alt="logo" />
         </Logo>
         <NavMenu>
           <NavLink className="menu-item" to="projects">
@@ -21,6 +19,15 @@ const Header = ({ toggle }) => {
           <NavLink className="menu-item" to="contact">
             Contact
           </NavLink>
+          <a
+            style={{ color: '#777779', cursor: "pointer", fontSize: "1.2rem" }}
+            target="blank"
+            onClick={toggle}
+            className="menu-item"
+            href={"https://shubhui.netlify.app/"}
+          >
+            My Ui Design <BsBoxArrowUpRight  size={15}/>
+          </a>
         </NavMenu>
         <NavBtn>
           <a
